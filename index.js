@@ -1,3 +1,16 @@
+ function capitalizeFirstLetter(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+  
+ }
+function titleCased() {
+  return tutorials.map(title => {
+    const words = title.split(" ")
+     const titleCasedWords = words .map(word => capitalizeFirstLetter(word));
+     return titleCasedWords.join(" ")
+  });
+  
+}
+
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
@@ -11,6 +24,12 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
-}
+
+const getTitleCasedTutorials = () => {
+  const titleCasedTutorials = titleCased();
+  console.log(titleCasedTutorials);
+  return titleCasedTutorials;
+};
+
+ getTitleCasedTutorials();
+ 
